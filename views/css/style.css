@@ -1,0 +1,122 @@
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define fonts and background colors */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.portfolio {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.project p {
+  margin-top: 10px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #0056b3;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+  }
+
+  nav ul {
+    padding-left: 0;
+  }
+
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .project a {
+    display: block;
+  }
+}
