@@ -1,3 +1,7 @@
+CREATE DATABASE portfolio;
+
+USE portfolio;
+
 -- Create the 'experiences' table
 CREATE TABLE experiences (
     id INT AUTO_INCREMENT PRIMARY KEY,
