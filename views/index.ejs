@@ -4,47 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nycun - Portfolio</title>
-    <link rel="stylesheet" link="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/populate.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <!-- Add navigation links to your other pages or sections -->
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
         <h1>NYCUN</h1>
     </header>
+    <img src="/images/logo.png" alt="Profile Image" class="round-image" width="150" height="150">
+    <nav>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <!-- Add navigation links to your other pages or sections -->
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <section class="hero">
+    <section class="intro">
         <h2>Welcome to My Portfolio</h2>
         <p>I am a passionate web developer with expertise in building web applications.</p>
+        <p>I am a passionate web developer with expertise in building web applications.</p>
+        <p>I am a passionate web developer with expertise in building web applications.</p>
+        <p>I am a passionate web developer with expertise in building web applications.</p>
+        <p>I am a passionate web developer with expertise in building web applications.</p>
+        <p>I am a passionate web developer with expertise in building web applications.</p>
+    </section>
+
+    <section class="portfolio">
+      <h2>My Projects</h2>
+      <div id="projects-container">
+          <!-- JavaScript will populate this section -->
+      </div>
     </section>
 
     <section class="education">
         <h2>Education</h2>
-        <div >
+        <div id="education-container">
             <!-- JavaScript will populate this section -->
         </div>
     </section>
     
     <section class="exp">
         <h2>Experience</h2>
-        <div >
+        <div id="exp-container">
             <!-- JavaScript will populate this section -->
         </div>
     </section>
 
-    <section class="portfolio">
-        <h2>My Projects</h2>
-        <div id="projects-container">
-            <!-- JavaScript will populate this section -->
-        </div>
-    </section>
+    
 
     <section class="contact">
         <h2>Contact Me</h2>
@@ -55,6 +64,15 @@
             <!-- Add links to your social media profiles or other contact methods -->
         </ul>
     </section>
+    <section class="contact">
+      <h2>Contact referrals</h2>
+      <p>Feel free to get in touch with:</p>
+      <ul>
+          <li>Widad toumi from zorx tech: <a href="mailto:youremail@example.com">widadtoumi@example.com</a></li>
+          <li>Sam Waddignton from veritas education: <a href="https://www.linkedin.com/in/yourprofile">samwadignton@example.com</a></li>
+          <!-- Add links to your social media profiles or other contact methods -->
+      </ul>
+  </section>
 
     <footer>
         <p>&copy; 2023 Mehdi Rahmoun. All rights reserved.</p>
@@ -62,167 +80,4 @@
 </body>
 </html>
 <script>
-    // JavaScript code to populate the project data dynamically
-    const projectsData = [
-        {
-            title: 'Project 1',
-            description: 'Description for Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            link: 'https://e-services.mulhouse-alsace.fr',
-        },
-        {
-            title: 'Project 2',
-            description: 'Description for Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            link: 'https://play.google.com/store/apps/details?id=com.zorx.gaming.algoman',
-        },
-        // Add more project objects as needed
-    ];
-
-    // Get the projects container element
-    const projectsContainer = document.getElementById('projects-container');
-
-    // Loop through the project data and create project entries
-    projectsData.forEach(project => {
-        const projectEntry = document.createElement('div');
-        projectEntry.classList.add('project');
-
-        const titleElement = document.createElement('h3');
-        titleElement.textContent = project.title;
-
-        const descriptionElement = document.createElement('p');
-        descriptionElement.textContent = project.description;
-
-        const linkElement = document.createElement('a');
-        linkElement.href = project.link;
-        linkElement.textContent = 'View Project';
-
-        projectEntry.appendChild(titleElement);
-        projectEntry.appendChild(descriptionElement);
-        projectEntry.appendChild(linkElement);
-
-        projectsContainer.appendChild(projectEntry);
-    });
 </script>
-<style>
-    /* Reset some default styles */
-body, h1, h2, p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Define fonts and background colors */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-header {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  background-color: #fff;
-  padding: 40px;
-  text-align: center;
-}
-
-.portfolio {
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.project {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.project h3 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.project p {
-  margin-top: 10px;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.project a:hover {
-  background-color: #0056b3;
-}
-
-.contact {
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.contact ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.contact li {
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-/* Media query for responsive design */
-@media (max-width: 768px) {
-  nav {
-    text-align: center;
-  }
-
-  nav ul {
-    padding-left: 0;
-  }
-
-  nav li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .project a {
-    display: block;
-  }
-}
-</style>
