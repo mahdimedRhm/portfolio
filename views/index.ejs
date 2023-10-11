@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nycun - Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/populate.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="main-content">
@@ -22,8 +24,10 @@
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello Friend</h1>
-            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+            <h1 class="display-2 text-white">Hello Friend, this is Mehdi Rahmoun's Portfolio</h1>
+            <p class="text-white mt-0 mb-5">
+                A highly motivated individual with a strong academic foundation in Cyber Security, currently awaiting graduation for a master’s degree in cyber security. Demonstrated expertise in programming languages such as PHP and Java Script, accompanied by experience in Web Application Security, Penetration testing. Notable strengths include exceptional problem-solving abilities, a meticulous attention to detail, and a rapid adaptability to new technologies. Practical experience acquired through internships and projects spans various aspects, including web development using PHP and JavaScript frameworks, along with significant contributions to game and mobile development.
+            </p>
           </div>
         </div>
       </div>
@@ -49,15 +53,15 @@
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                     <div>
-                      <span class="heading">22</span>
+                      <span class="heading"> <a href="https://www.github.com/mahdimedRhm"><i class="fa fa-github"></i> </a></span>
                       <span class="description">Github</span>
                     </div>
                     <div>
-                      <span class="heading">10</span>
+                      <span class="heading"> <a href="https://www.linkedin.com/in/mdrahmo/"><i class="fa fa-linkedin"></i> </a></span>
                       <span class="description">LinkedIn</span>
                     </div>
                     <div>
-                      <span class="heading">89</span>
+                      <span class="heading"><i class="fa fa-instagram"></i></span>
                       <span class="description">Instagram</span>
                     </div>
                   </div>
@@ -87,65 +91,15 @@
             <div class="card-body">
               <form>
                 <h6 class="heading-small text-muted mb-4">Projects</h6>
-                <div class="pl-lg-4">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      AlgoMan (Developed With Zorx Coorporate)
-                    </div>
-                    <div class="col-lg-4">
-                    </div>
-                    <div class="col-4 text-right">
-                        <a href="#!" class="btn btn-sm btn-primary">Link</a>
-                    </div>
-                  </div><br>
+                <div id="projects"></div>
 
-                  <div class="row">
-                    Developed With Zorx Coorporate Developed With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx Coorporate
-                   </div>
-                 <hr class="my-4">
-
-                </div>
                 <!-- Address -->
                 <h6 class="heading-small text-muted mb-4">Experiences</h6>
-                <div class="pl-lg-4">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        AlgoMan (Developed With Zorx Coorporate)
-                      </div>
-                      <div class="col-lg-4">
-                      </div>
-                      <div class="col-4 text-right">
-                          <a href="#!" class="btn btn-sm btn-primary">Link</a>
-                      </div>
-                    </div><br>
-  
-                    <div class="row">
-                      Developed With Zorx Coorporate Developed With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx Coorporate
-                     </div>
-                   <hr class="my-4">
-  
-                  </div>
-                <hr class="my-4">
+                <div id="experiences"></div>
+
                 <!-- Description -->
                 <h6 class="heading-small text-muted mb-4">Education</h6>
-                <div class="pl-lg-4">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        AlgoMan (Developed With Zorx Coorporate)
-                      </div>
-                      <div class="col-lg-4">
-                      </div>
-                      <div class="col-4 text-right">
-                          <a href="#!" class="btn btn-sm btn-primary">Link</a>
-                      </div>
-                    </div><br>
-  
-                    <div class="row">
-                      Developed With Zorx Coorporate Developed With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx CoorporateDeveloped With Zorx Coorporate
-                     </div>
-                   <hr class="my-4">
-  
-                  </div>
+                <div id="educations"></div>
               </form>
             </div>
           </div>
@@ -157,7 +111,7 @@
     <div class="row align-items-center justify-content-xl-between">
       <div class="col-xl-6 m-auto text-center">
         <div class="copyright">
-          <p>Made with <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Argon Dashboard</a> by Creative Tim</p>
+          <p>Made by  Mehdi Rahmoun also known by nycun</p>
         </div>
       </div>
     </div>

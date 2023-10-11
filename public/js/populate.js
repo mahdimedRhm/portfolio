@@ -1,53 +1,8 @@
  // JavaScript code to populate the project data dynamically
-const dummyData = [
-    {
-        title: 'name 1',
-        description: 'Description for name 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        link: 'https://e-services.mulhouse-alsace.fr',
-        start_date: '01/01/2020',
-        end_date: '12/12/2022'
-    },
-    {
-        title: 'name 2',
-        description: 'Description for name 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        link: 'https://play.google.com/store/apps/details?id=com.zorx.gaming.algoman',
-        start_date: '01/01/2020',
-        end_date: '12/12/2022'
-    },
-    {
-        title: 'name 2',
-        description: 'Description for name 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        link: 'https://play.google.com/store/apps/details?id=com.zorx.gaming.algoman',
-        start_date: '01/01/2020',
-        end_date: '12/12/2022'
-    },
-    // Add more project objects as needed
-];
-// Get the projects container element
 document.addEventListener('DOMContentLoaded', function () {
     fetchProjects();
     fetchExperiences();
     fetchEducations();
-    //example of using dummy data for you widad if needed
-    //const educationContainer = document.getElementById('education-container');
-    //// Loop through the project data and create project entries
-    //dummyData.forEach(project => {
-    //    const projectEntry = document.createElement('div');
-    //    projectEntry.classList.add('project');
-    //    const titleElement = document.createElement('h3');
-    //    titleElement.textContent = project.title;
-    //    const descriptionElement = document.createElement('p');
-    //    descriptionElement.textContent = project.description;
-    //    const linkElement = document.createElement('a');
-    //    linkElement.href = project.link;
-    //    linkElement.textContent = 'View';
-    //    projectEntry.appendChild(titleElement);
-    //    projectEntry.appendChild(descriptionElement);
-    //    projectEntry.appendChild(linkElement);
-    //    educationContainer.appendChild(projectEntry);
-    //    
-    //});
-    
 });
 
 function fetchProjects() {
@@ -60,16 +15,23 @@ function fetchProjects() {
       })
       .then((projects) => {
         // Get the projects list element
-        const projectsList = document.getElementById('projects-container');
+        const projectsList = document.getElementById('projects');
         // Loop through the projects and add them to the list
         projects.forEach((project) => {
           const listItem = document.createElement('div');
-          listItem.classList.add('project')
+          listItem.classList.add('pl-lg-4')
           listItem.innerHTML = `
-            <h3>${project.name}</h3>
-            <p>${project.description}</p>
-            <p>Team: ${project.team}</p>
-            <p>link: ${project.link}</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    ${project.name} (Developed With ${project.team}
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-4 text-right">
+                    <a href="${project.link}" class="btn btn-sm btn-primary">Link</a>
+                </div>
+            </div><br>
+            ${project.description}
+            <hr class="my-4">
           `;
           projectsList.appendChild(listItem);
         });
@@ -89,18 +51,25 @@ function fetchExperiences() {
       })
       .then((experiences) => {
         // Get the experiences list element
-        const experiencesList = document.getElementById('exp-container');
+        const experiencesList = document.getElementById('experiences');
         // Loop through the experiences and add them to the list
         experiences.forEach((experience) => {
           const listItem = document.createElement('div');
-          listItem.classList.add('project')
+          listItem.classList.add('pl-lg-4')
           listItem.innerHTML = `
-            <h3>${experience.role}</h3>
-            <p>${experience.company}</p>
-            <p>${experience.description}</p>
-            <p>From: ${experience.start_date}</p>
-            <p>To: ${experience.end_date}</p>
-            <p>link: ${experience.link}</p>
+          <div class="row">
+          <div class="col-lg-4">
+              ${experience.role} at ${experience.company})
+          </div>
+          <div class="col-lg-4">
+            <p>${experience.start_date} To: ${experience.end_date}</p>
+          </div>
+          <div class="col-4 text-right">
+              <a href="${experience.link}" class="btn btn-sm btn-primary">Link</a>
+          </div>
+          </div><br>
+          ${experience.description}
+          <hr class="my-4">
           `;
           experiencesList.appendChild(listItem);
         });
@@ -120,18 +89,25 @@ function fetchEducations(){
       })
       .then((educations) => {
         // Get the educations list element
-        const educationsList = document.getElementById('education-container');
+        const educationsList = document.getElementById('educations');
         // Loop through the educations and add them to the list
         educations.forEach((education) => {
           const listItem = document.createElement('div');
-          listItem.classList.add('project')
+          listItem.classList.add('pl-lg-4')
           listItem.innerHTML = `
-            <h3>${education.course}</h3>
-            <p>${education.school}</p>
-            <p>${education.description}</p>
-            <p>From: ${education.start_date}</p>
-            <p>To: ${education.end_date}</p>
-            <p>link: ${education.link}</p>
+            <div class="row">
+            <div class="col-lg-4">
+                ${education.course} at ${education.school})
+            </div>
+            <div class="col-lg-4">
+              <p>${education.start_date} To: ${education.end_date}</p>
+            </div>
+            <div class="col-4 text-right">
+                <a href="${education.link}" class="btn btn-sm btn-primary">Link</a>
+            </div>
+            </div><br>
+            ${education.description}
+            <hr class="my-4">
           `;
           educationsList.appendChild(listItem);
         });
