@@ -1,8 +1,8 @@
  // JavaScript code to populate the project data dynamically
 document.addEventListener('DOMContentLoaded', function () {
     fetchProjects();
-    fetchExperiences();
-    fetchEducations();
+    // fetchExperiences();
+    // fetchEducations();
 });
 
 function fetchProjects() {
@@ -23,7 +23,7 @@ function fetchProjects() {
           listItem.innerHTML = `
             <div class="row">
                 <div class="col-lg-4">
-                    ${project.name} (Developed With ${project.team}
+                    ${project.name} (Developed With ${project.team})
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-4 text-right">
@@ -59,13 +59,12 @@ function fetchExperiences() {
           listItem.innerHTML = `
           <div class="row">
           <div class="col-lg-4">
-              ${experience.role} at ${experience.company})
+              ${experience.role} at ${experience.company}
           </div>
           <div class="col-lg-4">
-            <p>${experience.start_date} To: ${experience.end_date}</p>
           </div>
           <div class="col-4 text-right">
-              <a href="${experience.link}" class="btn btn-sm btn-primary">Link</a>
+              <p>${experience.start_date}  ${experience.end_date}</p>
           </div>
           </div><br>
           ${experience.description}
@@ -97,7 +96,7 @@ function fetchEducations(){
           listItem.innerHTML = `
             <div class="row">
             <div class="col-lg-4">
-                ${education.course} at ${education.school})
+                ${education.course} at ${education.school}
             </div>
             <div class="col-lg-4">
               <p>${education.start_date} To: ${education.end_date}</p>
