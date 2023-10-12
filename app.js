@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000; // Set the port number
 
 
 const db = require('./db'); // Require the db.js module
+const apiRoutes = require('./apiRoutes');
 
 // Middleware for static assets
 app.use(express.static('public'));
@@ -17,14 +18,14 @@ app.get('/', (req, res) => {
   res.render('index'); // Render the index.ejs template
 });
 
+app.use('/api', apiRoutes(db));
+
 app.use((req, res, next) => {
   res.status(404).send("Sorry, the page you're looking for doesn't exist. Stop changing urls please this web site is not secure enough");
 });
 
-const apiRoutes = require('./apiRoutes');
 
 // Use the apiRoutes for a specific prefix (e.g., /api)
-app.use('/api', apiRoutes(db));
 
 // Start the server
 app.listen(port, () => {
