@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.render('index'); // Render the index.ejs template
 });
 
+app.use((req, res, next) => {
+  res.status(404).send("Sorry, the page you're looking for doesn't exist. Stop changing urls please this web site is not secure enough");
+});
+
 const apiRoutes = require('./apiRoutes');
 
 // Use the apiRoutes for a specific prefix (e.g., /api)
